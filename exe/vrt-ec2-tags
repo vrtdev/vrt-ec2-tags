@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'vrt/ec2/tags'
+
+Vrt::Ec2::Tags.tags
+
+# vi:set fileencoding=utf8 fileformat=unix filetype=ruby tabstop=2 expandtab:

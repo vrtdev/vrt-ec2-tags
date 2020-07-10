@@ -3,7 +3,7 @@
 module Vrt
   module Ec2
     module Tags
-      VERSION = '0.1.0'
+      VERSION = '0.1.1'
     end
   end
 end

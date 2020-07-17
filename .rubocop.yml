@@ -1,6 +1,7 @@
 ---
 AllCops:
+  NewCops: enable  # Enable new Cops by default.
   TargetRubyVersion: 2.5
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 140

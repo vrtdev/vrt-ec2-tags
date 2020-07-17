@@ -25,6 +25,20 @@ module Vrt
       end
 
       def self.read_tags
+        response = request_tags
+        case response
+        when Net::HTTPSuccess
+          response.body
+        when Net::HTTPUnauthorized
+          raise("#{response.message}: username and password set and correct?")
+        when Net::HTTPServerError
+          raise("#{response.message}: try again later?")
+        else
+          raise(response.message)
+        end
+      end
+
+      def self.request_tags
         http = Net::HTTP.new(tag_uri.host, tag_uri.port)
         http.use_ssl = true
         http.open_timeout = 2
@@ -33,8 +47,7 @@ module Vrt
         request = Net::HTTP::Post.new(tag_uri)
         request.add_field 'Content-Type', 'text/plain; charset=utf-8'
         request.body = instance_id
-        response = http.request(request)
-        response.body if response.is_a? Net::HTTPSuccess
+        http.request(request)
       end
 
       def self.instance_id

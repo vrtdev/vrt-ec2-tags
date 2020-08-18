@@ -14,11 +14,15 @@ gem 'vrt-ec2-tags'
 
 And then execute:
 
-    $ bundle
+```sh
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install vrt-ec2-tags
+```sh
+gem install vrt-ec2-tags
+```
 
 ## Usage
 
@@ -32,4 +36,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/vrt-ec2-tags.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/vrtdev/vrt-ec2-tags>.

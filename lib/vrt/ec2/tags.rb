@@ -21,7 +21,7 @@ module Vrt
       end
 
       def self.tag_uri
-        @tag_uri || @tag_uri = URI.parse('https://puppetapi.core.a51.be/tags')
+        @tag_uri || @tag_uri = URI.parse('https://cert-lambda.core.a51.be/tags')
       end
 
       def self.read_tags
